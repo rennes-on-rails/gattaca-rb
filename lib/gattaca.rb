@@ -16,5 +16,9 @@ module Gattaca
     end
   end
 
-  module_function :analyse, :mutate
+  def score(predictions)
+    analyse(predictions).map { |sequence| sequence.reduce(0) { |score, p| score += p[2] } }.max
+  end
+
+  module_function :analyse, :mutate, :score
 end

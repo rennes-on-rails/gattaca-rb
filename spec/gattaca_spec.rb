@@ -20,4 +20,10 @@ describe Gattaca do
       ]
     end
   end
+
+  describe ".score" do
+    it "of [ [1, 10, 10], [11, 15, 10], [12, 15, 20]] is 30" do
+      Gattaca.score([ [1, 10, 10], [11, 15, 10], [12, 15, 20] ]).must_equal 30
+    end
+  end
 end

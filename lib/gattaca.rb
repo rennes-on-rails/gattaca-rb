@@ -1,6 +1,7 @@
 module Gattaca
+
   def analyse(predictions)
-    head, *tail = predictions
+    head, *tail = predictions.sort
     tail.reduce([ [head] ]) do |sequences, p|
       sequences.reduce( [] ) do |acc, sequence|
         acc.push(*mutate(sequence, p))

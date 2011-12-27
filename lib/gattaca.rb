@@ -9,10 +9,10 @@ module Gattaca
   end
 
   def mutate(sequence, p)
-    if sequence.last[1] < p[0]
-      [sequence << p]
-    else
-      [sequence, [p]]
+    sub = sequence.select { |pp| pp[1] < p[0] }
+    case sub.count
+      when sequence.count then [sequence << p]
+      else [sequence, sub << p]
     end
   end
 

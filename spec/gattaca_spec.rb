@@ -13,5 +13,11 @@ describe Gattaca do
     it "can merge sequence with [ [1, 10, 10], [11, 15, 10] ]" do
       Gattaca.analyse([ [1, 10, 10], [11, 15, 10] ]).must_equal [ [[1, 10, 10], [11, 15, 10]] ]
     end
+    it "can split sequence with [ [1, 10, 10], [11, 15, 10], [12, 15, 20]]" do
+      Gattaca.analyse([ [1, 10, 10], [11, 15, 10], [12, 15, 20] ]).must_equal [
+        [[1, 10, 10], [11, 15, 10]],
+        [[1, 10, 10], [12, 15, 20]]
+      ]
+    end
   end
 end

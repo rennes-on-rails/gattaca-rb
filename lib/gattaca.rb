@@ -10,6 +10,7 @@ module Gattaca
 
   def mutate(sequence, p)
     if sequence.last[1] < p[0]
+      [sequence << p]
     else
       [sequence, [p]]
     end

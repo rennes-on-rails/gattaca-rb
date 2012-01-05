@@ -9,7 +9,12 @@ module Gattaca
   end
 
   def mutate(sequence, prediction)
-    [sequence, [prediction]]
+    last = sequence.last
+    if last[1] < prediction[0]
+      [ (sequence << prediction) ]
+    else
+      [sequence, [prediction]]
+    end
   end
 
   module_function :analyse, :mutate

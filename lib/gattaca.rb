@@ -1,3 +1,9 @@
+class Array
+  def score
+    reduce(0) { |score, p| score += p[2] }
+  end
+end
+
 module Gattaca
   def analyse(predictions)
     head, *tail = predictions
@@ -19,7 +25,7 @@ module Gattaca
 
   def score(predictions)
     sequences = analyse(predictions)
-    sequences.map { |s| s.reduce(0) { |score, p| score += p[2] } }.max
+    sequences.map { |s| s.score }.max
   end
 
   module_function :analyse, :mutate, :score

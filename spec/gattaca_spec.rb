@@ -23,5 +23,17 @@ describe Gattaca do
     it "scores 30 [1, 10, 10], [11, 15, 20]" do
       Gattaca.score([ [1, 10, 10], [11, 15, 20] ]).must_equal 30
     end
+    # it "scores 100 for example of README" do
+    #   Gattaca.score([
+    #     [43,  70,  27],
+    #     [3,   18,  24],
+    #     [65,  99,  45],
+    #     [20,  39,  26],
+    #     [45,  74,  26],
+    #     [10,  28,  20],
+    #     [78,  97,  23],
+    #     [0,   9,   22]
+    #   ]).must_equal 100
+    # end
   end
 end

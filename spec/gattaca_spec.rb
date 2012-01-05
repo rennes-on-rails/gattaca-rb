@@ -11,5 +11,8 @@ describe Gattaca do
     it "can separate overlapping predictions [1, 10, 10], [5, 15, 10]" do
       Gattaca.analyse([ [1, 10, 10], [5, 15, 10] ]).must_equal [ [[1, 10, 10]], [[5, 15, 10]] ]
     end
+    it "can merge separate predictions [1, 10, 10], [11, 15, 10]" do
+      Gattaca.analyse([ [1, 10, 10], [11, 15, 10] ]).must_equal [ [[1, 10, 10], [11, 15, 10]] ]
+    end
   end
 end

@@ -17,8 +17,11 @@ describe Gattaca do
   end
 
   describe ".score" do
-    it "scores  [1, 10, 10], [11, 15, 10]" do
+    it "scores 20 [1, 10, 10], [11, 15, 10]" do
       Gattaca.score([ [1, 10, 10], [11, 15, 10] ]).must_equal 20
+    end
+    it "scores 30 [1, 10, 10], [11, 15, 20]" do
+      Gattaca.score([ [1, 10, 10], [11, 15, 20] ]).must_equal 30
     end
   end
 end

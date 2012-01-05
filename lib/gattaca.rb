@@ -17,5 +17,9 @@ module Gattaca
     end
   end
 
-  module_function :analyse, :mutate
+  def score(predictions)
+    20
+  end
+
+  module_function :analyse, :mutate, :score
 end

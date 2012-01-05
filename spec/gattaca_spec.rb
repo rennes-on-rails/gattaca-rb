@@ -1,4 +1,6 @@
 require 'minitest/autorun'
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+require 'gattaca'
 
 describe Gattaca do
   describe ".analyse" do

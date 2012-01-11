@@ -1,3 +1,5 @@
+original puzzle can be found [there](http://www.facebook.com/careers/puzzles.php?puzzle_id=15)
+
 Gattaca
 =======
 

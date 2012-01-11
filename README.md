@@ -48,3 +48,10 @@ When constructing your output, you may only consider genes exactly as they are d
 Example Output:
 
     100
+
+Branches
+========
+
+* master is ready for a new implementation using minitest
+* fourth is what was showed at supinfo, on 05/01/2012
+* second is an alternate and more complete implementation
